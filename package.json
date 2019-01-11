@@ -1,0 +1,66 @@
+{
+  "name": "postcss-list-style-safari-fix",
+  "version": "1.0.0",
+  "description": "Remove list styles in CSS without preventing VoiceOver from announcing them in Safari",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/postcss-list-style-safari-fix",
+  "homepage": "https://github.com/jonathantneal/postcss-list-style-safari-fix#readme",
+  "bugs": "https://github.com/jonathantneal/postcss-list-style-safari-fix/issues",
+  "main": "index.js",
+  "module": "index.mjs",
+  "files": [
+    "index.js",
+    "index.js.map",
+    "index.mjs",
+    "index.mjs.map"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest": "rollup --config .rollup.js --silent",
+    "test": "npm run test:js && npm run test:tape",
+    "test:js": "eslint src/*.js --cache --ignore-path .gitignore --quiet",
+    "test:tape": "postcss-tape"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-dev": "^2.0.0",
+    "postcss-tape": "^4.0.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.3.0"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "safari",
+    "browser",
+    "fix",
+    "list",
+    "style",
+    "none",
+    "accessibility",
+    "accessible",
+    "a11y",
+    "voice",
+    "over",
+    "voiceover",
+    "read",
+    "announce",
+    "announced"
+  ]
+}
